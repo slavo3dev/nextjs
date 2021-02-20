@@ -7,7 +7,7 @@ const Note = () => {
 
   return (
     <div>
-      <h1>Note {id}</h1>
+      <h1>Note Page {id}</h1>
     </div>
   );
 };
