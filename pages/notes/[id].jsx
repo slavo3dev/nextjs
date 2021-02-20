@@ -1,9 +1,15 @@
 import React from "react";
+import { useRouter } from "next/router";
 
-const Note = () => (
-  <div>
-    <h1>Note</h1>
-  </div>
-);
+const Note = () => {
+  const router = useRouter();
+  const { id } = router.query;
+
+  return (
+    <div>
+      <h1>Note {id}</h1>
+    </div>
+  );
+};
 
 export default Note;
