@@ -3,8 +3,10 @@ import React from "react";
 export default () => (
   <div style={{ height: `calc(100vh - 60px)` }}>
     <div
-      css={{
-        variant: "containers.page",
+      style={{
+        width: "100%",
+        maxWidth: "960px",
+        margin: 0,
         display: "flex",
         alignItems: "center",
         height: "100%",
