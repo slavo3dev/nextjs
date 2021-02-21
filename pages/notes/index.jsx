@@ -4,24 +4,20 @@ import { jsx } from "theme-ui";
 import React from "react";
 import Link from "next/link";
 
-export default () => {
-  const notes = new Array(15)
-    .fill(1)
-    .map((e, i) => ({ id: i, title: `This is my note ${i}` }));
-
+export default ({ notes }) => {
   return (
-    <div css={{ variant: "containers.page" }}>
+    <div style={{ width: "100%", maxWidth: "960px", margin: "0 auto" }}>
       <h1>My Notes</h1>
 
       <div
-        css={{
+        style={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
         }}>
         {notes.map((note) => (
-          <div style={{ width: "33%", padding: "1%" }}>
+          <div style={{ width: "33%", padding: "1%" }} key={note.id}>
             <Link key={note.id} href="/notes/[id]" as={`/notes/${note.id}`}>
               <a style={{ textDecoration: "none", cursor: "pointer" }}>
                 <div
@@ -43,3 +39,12 @@ export default () => {
     </div>
   );
 };
+
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/note`);
+  const { data } = await res.json();
+
+  return {
+    props: { notes: data },
+  };
+}
