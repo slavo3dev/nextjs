@@ -1,34 +1,51 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
 import Link from "next/link";
 
 const Nav = () => (
   <header
-    sx={{
+    style={{
       height: "60px",
       width: "100vw",
-      bg: "primary",
-      borderBottom: "1px solid",
-      borderColor: "primary",
+      backgroundColor: "blue",
+      borderBottom: "1px solid red",
+      color: "white",
     }}>
     <nav
-      sx={{
+      style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        variant: "containers.page",
         height: "100%",
       }}>
       <Link href="/">
-        <a sx={{ fontWeight: "bold", fontSize: 4, cursor: "pointer" }}>
+        <a
+          style={{
+            fontWeight: "bold",
+            fontSize: "1.5em",
+            cursor: "pointer",
+            color: "white",
+            paddingLeft: "1%",
+          }}>
           Note App
         </a>
       </Link>
 
       <Link href="/notes">
-        <a sx={{ color: "text", fontSize: 3, cursor: "pointer" }}>notes</a>
+        <a style={{ color: "white", fontSize: "1em", cursor: "pointer" }}>
+          notes
+        </a>
       </Link>
+
+      <a
+        style={{
+          color: "white",
+          fontSize: "1em",
+          paddingRight: "1%",
+          cursor: "pointer",
+        }}
+        href={process.env.HELP_APP_URL}>
+        Help
+      </a>
     </nav>
   </header>
 );

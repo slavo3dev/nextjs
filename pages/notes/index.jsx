@@ -1,6 +1,7 @@
 // pages/notes/index.jsx
 /** @jsximport 'theme-ui' */
 import { jsx } from "theme-ui";
+import React from "react";
 import Link from "next/link";
 
 export default () => {
@@ -20,10 +21,18 @@ export default () => {
           flexWrap: "wrap",
         }}>
         {notes.map((note) => (
-          <div css={{ width: "33%", p: 2 }}>
+          <div style={{ width: "33%", padding: "1%" }}>
             <Link key={note.id} href="/notes/[id]" as={`/notes/${note.id}`}>
-              <a css={{ textDecoration: "none", cursor: "pointer" }}>
-                <div css={{ variant: "containers.card" }}>
+              <a style={{ textDecoration: "none", cursor: "pointer" }}>
+                <div
+                  style={{
+                    boxShadow:
+                      "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+                    border: "1px solid",
+                    borderColor: "red",
+                    borderRadius: "6px",
+                    padding: "4%",
+                  }}>
                   <strong>{note.title}</strong>
                 </div>
               </a>
