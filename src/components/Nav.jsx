@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default Nav = () => (
+const Nav = () => (
   <header
     style={{
       height: "60px",
@@ -50,3 +50,5 @@ export default Nav = () => (
     </nav>
   </header>
 );
+
+export default Nav;
