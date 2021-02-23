@@ -12,9 +12,10 @@ export async function getServerSideProps({ params, req, res }) {
   const response = await fetch(`${process.env.API_URL}/api/note/${params.id}`);
 
   if (!response.ok && typeof window === "undefined") {
-    res.writeHead(302, { Location: "/notes" });
-    res.end();
-    return { props: {} };
+    const data = { title: "Sorry something went wrong.... " };
+    // res.writeHead(302, { Location: "/notes" });
+    // res.end();
+    return { props: { note: data } };
   }
 
   const { data } = await response.json();
