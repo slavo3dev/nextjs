@@ -26,13 +26,13 @@ const Nav = () => (
             color: "white",
             paddingLeft: "1%",
           }}>
-          Note App
+          Blog App
         </a>
       </Link>
 
       <Link href="/notes">
         <a style={{ color: "white", fontSize: "1em", cursor: "pointer" }}>
-          notes
+          Articles
         </a>
       </Link>
 
