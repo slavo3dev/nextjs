@@ -19,14 +19,14 @@
     "**/*.ts",
     "**/*.tsx",
     "src/data/data.js",
-    "pages/api/note/index.ts",
-    "pages/api/note/[id].ts",
+    "pages/api/note/index.js",
+    "pages/api/note/[id].js",
     "pages/_app.tsx",
     "pages/index.tsx",
     "pages/notes/index.tsx",
     "pages/notes/[id].tsx",
     "src/components/nav.tsx",
-    "pages/api/index.ts"
+    "pages/api/index.js"
   ],
   "exclude": ["node_modules"]
 }
