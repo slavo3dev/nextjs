@@ -20,7 +20,7 @@ export function getStaticProps() {
   return {
     props: {
       content: {
-        title: "- Personal Note APP -",
+        title: "- Personal NextJS Blog -",
       },
     },
   };

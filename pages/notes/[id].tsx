@@ -3,7 +3,7 @@ import React from "react";
 export default ({ note }) => {
   return (
     <div style={{ width: "100%", maxWidth: "960px", margin: "0 auto" }}>
-      <h1>Note: {note.title} </h1>
+      <h1>Title: {note.title} </h1>
     </div>
   );
 };
