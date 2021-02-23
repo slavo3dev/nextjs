@@ -43,7 +43,8 @@ const Nav = () => (
           paddingRight: "1%",
           cursor: "pointer",
         }}
-        href={process.env.HELP_APP_URL}>
+        href={process.env.HELP_APP_URL}
+        target="_blank">
         Help
       </a>
     </nav>
