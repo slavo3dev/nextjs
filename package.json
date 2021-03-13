@@ -1,30 +1,15 @@
 {
-  "name": "lionnext",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Slavo <slavo@slavo3.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@emotion/react": "^11.1.5",
-    "@theme-ui/presets": "^0.3.5",
-    "body-parser": "^1.19.0",
-    "dotenv-load": "^2.0.0",
-    "next": "^10.0.7",
-    "next-connect": "^0.8.1",
-    "next-env": "^1.1.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "theme-ui": "^0.3.5"
-  },
+  "name": "nextjs-course",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
-  "devDependencies": {
-    "@emotion/babel-plugin": "^11.2.0",
-    "@types/node": "^14.14.31",
-    "@types/react": "^17.0.2",
-    "typescript": "^4.1.5"
+  "dependencies": {
+    "next": "10.0.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   }
 }
